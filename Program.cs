@@ -5,6 +5,12 @@ namespace Project_120_L_11
 {
     internal class Program
     {
+
+        // Carla Baysinger
+        // Programming 120 Lecture 11 notes
+        // May 21st 2024
+
+
         string student1 = "Hoang";
         string student2 = "Vicky";
 
@@ -23,14 +29,14 @@ namespace Project_120_L_11
 
         static void Main(string[] args)
         {
-            // Call my preload method to populate my arrays
+            
+            //// Call my preload method to populate my arrays
             PreLoad();
-
             Console.Write("Please enter a last name to search for: ");
             string studentToSearchFor = Console.ReadLine();
             int studentIndex = FindStudentIdByLastName(studentToSearchFor);
 
-            if(studentIndex >= 0)
+            if (studentIndex >= 0)
             {
                 DisplayStudentInformation(studentIndex);
             }
@@ -41,12 +47,13 @@ namespace Project_120_L_11
             }
 
             // .Length gives the size of the array
-            DisplayAllStudents();
-            
+
         }//main
 
         // Linear Search
         // Create a method that returns if a student is in the class
+
+       
         public static bool EnrolledInClassByLastName(string studentsLastName) // <--- Search Key
         {
             for (int i = 0; i < lastNames.Length; i++)
